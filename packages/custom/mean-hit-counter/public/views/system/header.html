@@ -1,17 +1,10 @@
 <div class="md-toolbar-tools" ng-controller="HeaderController as hdrctr">
   <img src="/meanStarter/assets/img/logo.png" alt="" class="MEAN-Logo"/>
-  <h2 class="pressed-text" ui-sref="home" mean-token="'site-title'">&nbsp;MEAN</h2>
+  <h2 class="pressed-text" ui-sref="home" mean-token="'site-title'">&nbsp;MEAN Hit Counter</h2>
   <md-button class="md-button" aria-label="{{item.link}}" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.main" ui-sref="{{item.link}}" mean-token="item.link">
     {{item.title}}
   </md-button>
   <span flex></span>
-  <md-button class="md-button" aria-label="Sign Up" ui-sref="auth.register" ng-if="!hdrctr.hdrvars.authenticated">
-    Join
-  </md-button>
-  <md-button class="md-button" aria-label="Login" ui-sref="auth.login" ng-if="!hdrctr.hdrvars.authenticated">
-    Login
-  </md-button>
-
   <md-menu ng-if="hdrctr.hdrvars.authenticated" md-position-mode="target-right target">
     <md-button aria-label="Account" class="md-button top-link" ng-click="$mdOpenMenu()">
       <md-tooltip md-direction="left">Account Settings</md-tooltip>

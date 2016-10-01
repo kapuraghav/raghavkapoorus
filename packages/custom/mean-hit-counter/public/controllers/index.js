@@ -1,7 +1,7 @@
 'use strict'
 
-angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
-  function ($scope, Global) {
+angular.module('mean.system').controller('IndexController', ['$scope', 'Global', 'Counter',
+  function ($scope, Global, Counter) {
     $scope.global = Global
     $scope.sites = [{
       'name': 'makeapoint',
@@ -77,6 +77,8 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
       text: 'Video support, shared coding and to meet the people behind mean.io',
       icon: 'hangout'
     }]
+
+    $scope.counterValue = Counter.get()
 
     $scope.$watch(function () {
       for (var i = 0; i < $scope.sites.length; i += 1) {
