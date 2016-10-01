@@ -26,7 +26,7 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'https://mean-hit-counter.herokuapp.com',
   app: {
     name: 'MEAN - A Modern Stack - Production'
   },
