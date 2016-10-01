@@ -4,10 +4,10 @@ module.exports = function (MyPackage, app, auth, database) {
   // example route
   app.get('/api/counter', function (req, res, next) {
     // access db
-
     // increment and update it
     Counter.find({}, function (err, counters) {
       if (err) {
+        console.log(err)
         res.send('Error Occurred')
       }
       console.log(counters)
@@ -19,7 +19,7 @@ module.exports = function (MyPackage, app, auth, database) {
 
         counter.save()
 
-        res.send(counter.count)
+        res.send(counter)
       } else {
         var value = counters[0]
 

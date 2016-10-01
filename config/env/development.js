@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  db: process.env.MONGODB,
+  db: 'mongodb://test:test@ds033337.mongolab.com:33337/kapuraghav',
   debug: true,
   logging: {
     format: 'tiny'
